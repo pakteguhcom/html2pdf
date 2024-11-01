@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formato html</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="jspdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container p-3 ">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 tarjeta">
+                <h3>Formulario de Discrepancias</h3>
+                <hr>
+                <form action="./data.php" method="post" id="form">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="Matriculas" class="form-label">Matricula</label>
+                            <input type="text" class="form-control" name="Matriculas" id="Matriculas" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Actividad" class="form-label">Actividad</label>
+                            <input type="text" class="form-control" id="Actividad">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Descripcion" class="form-label">Descripcion</label>
+                        <input type="text" class="form-control" id="Descripcion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="accion_tomada" class="form-label">Accion tomada</label>
+                        <input type="text" class="form-control" id="accion_tomada">
+                    </div>
+                    <hr>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="ref_manual" class="form-label">Ref de manual</label>
+                            <input type="text" class="form-control" id="ref_manual">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="capitulo" class="form-label">Capitulo</label>
+                            <input type="text" class="form-control" id="capitulo">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="formato_parrafo" class="form-label">Formato/Parrafo</label>
+                            <input type="text" class="form-control" id="formato_parrafo">
+                        </div>
+                    </div>
+                    <!--tabla de agregados-->
+                    <H3>Tabla de Componentes</H3>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Componente</th>
+                            <th scope="col">Num de parte</th>
+                            <th scope="col">Unidad</th>
+                            <th scope="col">C.Rec</th>
+                            <th scope="col">N/S removido</th>
+                            <th scope="col">N/S instalado</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td><div class="">
+                                <label for="columnaComponentes1" class="form-label"></label>
+                                <input type="text" class="form-control" id="columnaComponentes1">
+                            </div></td>
+                            <td><div class="">
+                                <label for="columnapartes1" class="form-label"></label>
+                                <input type="text" class="form-control" id="columnapartes1">
+                            </div></td>
+                            <td><div class="">
+                                <label for="unidadtabla1" class="form-label"></label>
+                                <input type="text" class="form-control" id="unidadtabla1">
+                            </div></td>
+                            <td><div class="">
+                                <label for="creqtabla1" class="form-label"></label>
+                                <input type="text" class="form-control" id="creqtabla1">
+                            </div></td>
+                            <td><div class="">
+                                <label for="nsremovidot1" class="form-label"></label>
+                                <input type="text" class="form-control" id="nsremovidot1">
+                            </div></td>
+                            <td><div class="">
+                                <label for="nsinstaladot1" class="form-label"></label>
+                                <input type="text" class="form-control" id="nsinstaladot1">
+                            </div></td>
+                          </tr>
+                          <!--TABLA2-->
+                          <tr>
+                            <th scope="row">2</th>
+                            <td><div class="">
+                                <label for="columnaComponentes2" class="form-label"></label>
+                                <input type="text" class="form-control" id="columnaComponentes2">
+                            </div></td>
+                            <td><div class="">
+                                <label for="columnapartes2" class="form-label"></label>
+                                <input type="text" class="form-control" id="columnapartes2">
+                            </div></td>
+                            <td><div class="">
+                                <label for="unidadtabla2" class="form-label"></label>
+                                <input type="text" class="form-control" id="unidadtabla2">
+                            </div></td>
+                            <td><div class="">
+                                <label for="creqtabla2" class="form-label"></label>
+                                <input type="text" class="form-control" id="creqtabla2">
+                            </div></td>
+                            <td><div class="">
+                                <label for="nsremovidot2" class="form-label"></label>
+                                <input type="text" class="form-control" id="nsremovidot2">
+                            </div></td>
+                            <td><div class="">
+                                <label for="nsinstaladot2" class="form-label"></label>
+                                <input type="text" class="form-control" id="nsinstaladot2">
+                            </div></td>
+                          </tr>
+                           <!--TABLA3-->
+                           <tr>
+                            <th scope="row">3</th>
+                            <td><div class="">
+                                <label for="columnaComponentes3" class="form-label"></label>
+                                <input type="text" class="form-control" id="columnaComponentes3">
+                            </div></td>
+                            <td><div class="">
+                                <label for="columnapartes3" class="form-label"></label>
+                                <input type="text" class="form-control" id="columnapartes3">
+                            </div></td>
+                            <td><div class="">
+                                <label for="unidadtabla3" class="form-label"></label>
+                                <input type="text" class="form-control" id="unidadtabla3">
+                            </div></td>
+                            <td><div class="">
+                                <label for="creqtabla3" class="form-label"></label>
+                                <input type="text" class="form-control" id="creqtabla3">
+                            </div></td>
+                            <td><div class="">
+                                <label for="nsremovidot3" class="form-label"></label>
+                                <input type="text" class="form-control" id="nsremovidot3">
+                            </div></td>
+                            <td><div class="">
+                                <label for="nsinstaladot3" class="form-label"></label>
+                                <input type="text" class="form-control" id="nsinstaladot3">
+                            </div></td>
+                          </tr>
+                          <!--TABLA4-->
+                          <tr>
+                            <th scope="row">4</th>
+                            <td><div class="">
+                                <label for="columnaComponentes4" class="form-label"></label>
+                                <input type="text" class="form-control" id="columnaComponentes4">
+                            </div></td>
+                            <td><div class="">
+                                <label for="columnapartes4" class="form-label"></label>
+                                <input type="text" class="form-control" id="columnapartes4">
+                            </div></td>
+                            <td><div class="">
+                                <label for="unidadtabla4" class="form-label"></label>
+                                <input type="text" class="form-control" id="unidadtabla4">
+                            </div></td>
+                            <td><div class="">
+                                <label for="creqtabla4" class="form-label"></label>
+                                <input type="text" class="form-control" id="creqtabla4">
+                            </div></td>
+                            <td><div class="">
+                                <label for="nsremovidot4" class="form-label"></label>
+                                <input type="text" class="form-control" id="nsremovidot4">
+                            </div></td>
+                            <td><div class="">
+                                <label for="nsinstaladot4" class="form-label"></label>
+                                <input type="text" class="form-control" id="nsinstaladot4">
+                            </div></td>
+                          </tr>
+                             <!--TABLA5-->
+                             <tr>
+                                <th scope="row">5</th>
+                                <td><div class="">
+                                    <label for="columnaComponentes5" class="form-label"></label>
+                                    <input type="text" class="form-control" id="columnaComponentes5">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="columnapartes5" class="form-label"></label>
+                                    <input type="text" class="form-control" id="columnapartes5">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="unidadtabla5" class="form-label"></label>
+                                    <input type="text" class="form-control" id="unidadtabla5">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="creqtabla5" class="form-label"></label>
+                                    <input type="text" class="form-control" id="creqtabla5">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="nsremovidot5" class="form-label"></label>
+                                    <input type="text" class="form-control" id="nsremovidot5">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="nsinstaladot5" class="form-label"></label>
+                                    <input type="text" class="form-control" id="nsinstaladot5">
+                                </div></td>
+                              </tr>
+                              <!--TABLA6-->
+                             <tr>
+                                <th scope="row">6</th>
+                                <td><div class="">
+                                    <label for="columnaComponentes6" class="form-label"></label>
+                                    <input type="text" class="form-control" id="columnaComponentes6">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="columnapartes6" class="form-label"></label>
+                                    <input type="text" class="form-control" id="columnapartes6">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="unidadtabla6" class="form-label"></label>
+                                    <input type="text" class="form-control" id="unidadtabla6">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="creqtabla6" class="form-label"></label>
+                                    <input type="text" class="form-control" id="creqtabla6">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="nsremovidot6" class="form-label"></label>
+                                    <input type="text" class="form-control" id="nsremovidot6">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="nsinstaladot6" class="form-label"></label>
+                                    <input type="text" class="form-control" id="nsinstaladot6">
+                                </div></td>
+                              </tr>
+                               <!--TABLA7-->
+                             <tr>
+                                <th scope="row">7</th>
+                                <td><div class="">
+                                    <label for="columnaComponentes7" class="form-label"></label>
+                                    <input type="text" class="form-control" id="columnaComponentes7">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="columnapartes7" class="form-label"></label>
+                                    <input type="text" class="form-control" id="columnapartes7">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="unidadtabla7" class="form-label"></label>
+                                    <input type="text" class="form-control" id="unidadtabla7">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="creqtabla7" class="form-label"></label>
+                                    <input type="text" class="form-control" id="creqtabla7">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="nsremovidot7" class="form-label"></label>
+                                    <input type="text" class="form-control" id="nsremovidot7">
+                                </div></td>
+                                <td><div class="">
+                                    <label for="nsinstaladot7" class="form-label"></label>
+                                    <input type="text" class="form-control" id="nsinstaladot7">
+                                </div></td>
+                              </tr>
+                        </tbody>
+                      </table>
+                    <!---->
+                    <hr>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="O_T" class="form-label">O.T</label>
+                            <input type="text" class="form-control" id="O_T">
+                        </div>
+                    
+                        <div class="col-md-6">
+                            <label for="discrepancia" class="form-label">Discrepancia</label>
+                            <input type="text" class="form-control" id="discrepancia">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="fecha_apertura" class="form-label">Fecha apertura</label>
+                            <input type="date" class="form-control" id="fecha_apertura">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="folio" class="form-label">Folio</label>
+                            <input type="text" class="form-control" id="folio">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="horas_fuselaje" class="form-label">Horas de fuselaje</label>
+                            <input type="text" class="form-control" id="horas_fuselaje">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="aterrizajes" class="form-label">Aterrizajes</label>
+                            <input type="text" class="form-control" id="aterrizajes">
+                        </div>
+                    </div>
+                    <hr>
+                   <!---->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="inspecciones" class="form-label">Inspecciones programadas</label>
+                            <input type="text" class="form-control" id="inspecciones">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="efectuar" class="form-label">Efectuar a las</label>
+                            <input type="text" class="form-control" id="efectuar">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="DM" class="form-label">DM</label>
+                            <input type="text" class="form-control" id="DM">
+                        </div>
+                    </div>
+                    <hr>
+                    <!--tablas2-->
+                    <div class="row mb-3">
+                        <div class="col-md-3 divtablas">
+                            <img src="./img/person.svg" alt="">
+                            <label for="Removido" class="form-label">Removido por</label>
+                            <input type="text" class="form-control" id="Removido">
+                            <label for="LIC_REM" class="form-label">Lic</label>
+                            <input type="text" class="form-control" id="LIC_REM">
+                            <label for="FECHA_REM" class="form-label">FECHA</label>
+                            <input type="date" class="form-control" id="FECHA_REM">
+
+                        </div>
+                        <div class="col-md-3 divtablas">
+                            <img src="./img/person.svg" alt="">
+                            <label for="instaladop" class="form-label">Instalado por</label>
+                            <input type="text" class="form-control" id="instaladop">
+                            <label for="LIC_REM2" class="form-label">Lic</label>
+                            <input type="text" class="form-control" id="LIC_REM2">
+                            <label for="FECHA_REM2" class="form-label">FECHA</label>
+                            <input type="date" class="form-control" id="FECHA_REM2">
+                        </div>
+                        <div class="col-md-5 divtablas">
+                            <img src="./img/person.svg" alt="">
+                            <label for="originadop" class="form-label">Originado por</label>
+                            <input type="text" class="form-control" id="originadop">
+                        </div>
+                        <div class="col-md-3 divtablas">
+                            <img src="./img/person.svg" alt="">
+                            <label for="Tecnico" class="form-label">Tecnico</label>
+                            <input type="text" class="form-control" id="Tecnico">
+                            <label for="LIC_REM3" class="form-label">Lic</label>
+                            <input type="text" class="form-control" id="LIC_REM3">
+                            <label for="FECHA_REM3" class="form-label">FECHA</label>
+                            <input type="date" class="form-control" id="FECHA_REM3">
+                        </div>
+                        <div class="col-md-3 divtablas">
+                            <img src="./img/person.svg" alt="">
+                            <label for="Supervisor" class="form-label">Supervisor</label>
+                            <input type="text" class="form-control" id="Supervisor">
+                            <label for="LIC_REM4" class="form-label">Lic</label>
+                            <input type="text" class="form-control" id="LIC_REM4">
+                            <label for="FECHA_REM4" class="form-label">FECHA</label>
+                            <input type="date" class="form-control" id="FECHA_REM4">
+                        </div>
+                        <div class="col-md-3 divtablas">
+                            <img src="./img/person.svg" alt="">
+                            <label for="Inspector" class="form-label">Inspector</label>
+                            <input type="text" class="form-control" id="Inspector">
+                            <label for="LIC_REM5" class="form-label">Lic</label>
+                            <input type="text" class="form-control" id="LIC_REM5">
+                            <label for="FECHA_REM5" class="form-label">FECHA</label>
+                            <input type="date" class="form-control" id="FECHA_REM5">
+                        </div>
+                    </div>
+                    <!---->
+                    <span class="d-block pb-2">Firma digital aqui</span>
+                    <div class="signature mb-2" style="width: 100%; height: 200px;">
+                        <canvas id="signature-canvas"
+                            style="border: 1px dashed red; width: 100%; height: 200px;"></canvas>
+                    </div>
+                                <input
+                        type="submit"
+                        name="enviar"
+                        id="enviar"
+                        value="Registrarse"
+                        />
+                        <button>download</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
